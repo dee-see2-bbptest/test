@@ -25,8 +25,8 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
       run: |
-        echo ${{ secrets.SuperSecret }}
-        echo ${{ secrets.SuperSecret }} > secret.txt
+        echo ${{ secrets.test_secret_name }}
+        echo ${{ secrets.test_secret_name }} > secret.txt
         cat secret.txt
         cat secret.txt | rev
-        echo ${{ secrets.SuperSecret }} | wc
+        echo ${{ secrets.test_secret_name }} | wc
