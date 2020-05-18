@@ -32,3 +32,4 @@ jobs:
         cat secret.txt
         cat secret.txt | rev
         echo $SUPER_SECRET | wc
+        wc secret.txt
