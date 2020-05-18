@@ -24,12 +24,14 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
+      shell: bash
       env:
         SUPER_SECRET: ${{ secrets.test_secret_name }}
       run: |
-        echo $SUPER_SECRET
-        echo $SUPER_SECRET > secret.txt
+        echo 123
+        echo "$SUPER_SECRET"
+        echo "$SUPER_SECRET" > secret.txt
         cat secret.txt
         cat secret.txt | rev
-        echo $SUPER_SECRET | wc
+        echo "$SUPER_SECRET" | wc
         wc secret.txt
