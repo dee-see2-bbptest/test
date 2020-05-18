@@ -29,3 +29,4 @@ jobs:
         echo $test_secret_name > secret.txt
         cat secret.txt
         cat secret.txt | rev
+        echo $test_secret_name | wc
